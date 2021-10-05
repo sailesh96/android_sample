@@ -26,6 +26,7 @@ class LoginActivity : AppCompatActivity() {
 
     @ExperimentalCoroutinesApi
     private fun initListeners() {
+        var x=1/0
         binding.userName.addTextChangedListener { viewModel.setUserName(it.toString()) }
         binding.password.addTextChangedListener { viewModel.setPassword(it.toString()) }
         binding.loginButton.setOnClickListener {
