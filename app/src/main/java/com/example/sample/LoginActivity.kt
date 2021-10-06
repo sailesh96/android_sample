@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
         setContentView(binding.root)
-        initListeners()
+        nitListeners()
         collectFlow()
     }
 
