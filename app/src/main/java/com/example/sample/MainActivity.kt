@@ -11,8 +11,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setUsername()
+
     }
     private fun setUsername() {
+        var x:String?= null
+        var y = x!!.length
         binding.username.text = "Hello ${intent.getStringExtra("username")}"
     }
 
