@@ -9,7 +9,9 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine
 
 class LoginViewModel:ViewModel() {
+    @ExperimentalCoroutinesApi
     private val password = MutableStateFlow("")
+    @ExperimentalCoroutinesApi
     private val username = MutableStateFlow("")
 
     @ExperimentalCoroutinesApi
@@ -22,6 +24,7 @@ class LoginViewModel:ViewModel() {
         this.username.value = username
     }
 
+    @ExperimentalCoroutinesApi
     val isSubmitEnabled: Flow<ValidationMessage> = combine(username, password) { username, password ->
         val usernameRegex = "[a-zA-Z0-9]+"
         val passwordRegex = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@!?_])([a-zA-Z0-9@!?_]{5,})"
