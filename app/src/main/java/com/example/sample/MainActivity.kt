@@ -14,8 +14,6 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun setUsername() {
-        var x:String?= null
-        var y = x!!.length
         binding.username.text = "Hello ${intent.getStringExtra("username")}"
     }
 
