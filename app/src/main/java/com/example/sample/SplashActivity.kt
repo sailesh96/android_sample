@@ -17,7 +17,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun moveToLoginActivity() {
-          var x=1
+          var x=2
         startActivity(Intent(this, LoginActivity::class.java))
         finish()
     }
